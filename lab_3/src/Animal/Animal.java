@@ -3,10 +3,8 @@ package Animal;
 import Animal.Skills.Emotion;
 import Food.Food;
 import Place.Place;
-
 import java.util.Objects;
 
-// в чем смысл этого абстрактного класса?)
 public abstract class Animal {
 
     public Animal(String name, int age) {

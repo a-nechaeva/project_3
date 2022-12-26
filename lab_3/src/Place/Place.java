@@ -13,7 +13,13 @@ public class Place {
 
     @Override
     public String toString() {
-        return "в " + this.location;
+        String house;
+        switch (this.location) {
+            case KENGAHOUSE -> house = "доме Кенги";
+            case TIGRAHOUSE -> house = "доме Тигры";
+            default -> house = "на улице";
+        }
+        return "в " + house;
     }
 
 }

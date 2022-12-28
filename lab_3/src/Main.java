@@ -1,8 +1,7 @@
 import Animal.*;
 import Animal.Skills.Emotion;
-import Food.Food;
-import Place.Place;
-import Place.Location;
+import Food.*;
+import Place.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,10 +21,16 @@ public class Main {
         tigra.say(ru.expressEmotion());
         Place place = new Place(Location.KENGAHOUSE);
         System.out.println(tigra.toLive(place));
-        System.out.println(tigra.eat(fishOil) + fishOil.time(1) + "," + fishOil.time(2) + "," + fishOil.time(3));
-        System.out.println(ru.eat(kasha) + kasha.time(1));
+        TimeToEat breakfast = new TimeToEat(Times.BREAKFAST);
+        TimeToEat lunch = new TimeToEat(Times.LUNCH);
+        TimeToEat dinner = new TimeToEat(Times.DINNER);
+        TimeToEat sometimes = new TimeToEat(Times.SOMETIMES);
+        System.out.println(tigra.eat(fishOil, breakfast));
+        System.out.println(tigra.eat(fishOil, lunch));
+        System.out.println(tigra.eat(fishOil, dinner));
+        System.out.println(ru.eat(kasha, breakfast));
         kenga.think(tigra.getName());
-        System.out.println(tigra.eat(kasha) + kasha.time(4));
+        System.out.println(tigra.eat(kasha,sometimes));
 
     }
 }

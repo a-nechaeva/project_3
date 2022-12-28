@@ -39,16 +39,6 @@ public class Food {
         if (!obj.getClass().equals(this.getClass())) return false;
         Food one = (Food) obj;
         return name.equals(one.name) && calorie == one.calorie;
-    }
-    public String time(int numb) {
-        String time;
-        switch (numb) {
-            case 1 -> time = " на завтрак";
-            case 2 -> time = " на обед";
-            case 3 -> time = " на ужин";
-            default -> time = " иногда";
-        }
-        return time;
-    }
-
+    } 
 }
+
